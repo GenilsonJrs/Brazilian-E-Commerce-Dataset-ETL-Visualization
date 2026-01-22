@@ -1,0 +1,8 @@
+pandas
+psycopg2
+hashlib
+psycopg2
+warnings
+seaborn
+sqlalchemy
+matplotlib
