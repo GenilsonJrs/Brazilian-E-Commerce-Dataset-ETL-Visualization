@@ -165,3 +165,7 @@ Este guia consolida os padrões léxicos e as diretrizes de padronização de no
                         | srk_vdr (PK)  |
                         | cod_vdr       |
                         +---------------+
+```
+---
+
+*Documento gerado para o projeto Brazilian E-Commerce Dataset ETL & Visualization*
