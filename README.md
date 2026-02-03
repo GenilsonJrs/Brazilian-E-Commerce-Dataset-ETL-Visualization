@@ -9,8 +9,6 @@ Pipeline de ETL utilizando a **Arquitetura de Medalhão** (Bronze, Silver e Gold
 | 202045482   | [Genilson Silva de Araújo Junior](https://github.com/GenilsonJrs)    |
 | 190036427   | [Pedro Henrique Caldeira de Moraes](https://github.com/pedromoraes39)    |
 
----
-
 ## Dataset
 
 Os dados utilizados são provenientes do [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), contendo informações de 100 mil pedidos de 2016 a 2018.
@@ -18,9 +16,9 @@ Os dados utilizados são provenientes do [Brazilian E-Commerce Public Dataset by
 ## Dashboard
 
 ![Visão Geral](Data%20Visualization/img/1.jpeg)
-![Saúde Operacional](Data%20Visualization/img/2.png)
-![Análise Logística](Data%20Visualization/img/3.png)
-![Segmentação](Data%20Visualization/img/4.png)
+![Saúde Operacional](Data%20Visualization/img/1.jpeg)
+![Análise Logística](Data%20Visualization/img/1.jpeg)
+![Segmentação](Data%20Visualization/img/1.jpeg)
 
 ## Requirements
 
