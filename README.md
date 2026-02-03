@@ -34,7 +34,7 @@ Certifique-se de que o Docker está rodando e execute:
 docker compose up -d
 ```
 
-### 2. Install dependencies
+### 2. Instalando Dependências
 
 ```bash
 python3 -m venv .venv
@@ -42,7 +42,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Run notebooks in order
+### 3. Rodando Notebooks
 
 Os notebooks devem ser executados na ordem da Arquitetura de Medalhão, localizados na pasta Transformer/:
 
@@ -52,16 +52,16 @@ Os notebooks devem ser executados na ordem da Arquitetura de Medalhão, localiza
 
 ## Database
 
-**Conexão:** `postgresql://postgres:postgres@localhost:5432/olist_db`
+**Conexão:** `postgresql://postgres:postgres@localhost:5432/brazilian-e-commerce`
 
 Schemas:
 - **`silver.*`**: Contém os dados limpos e padronizados (ex: `silver.orders`, `silver.products`, `silver.customers`).
 - **`gold.*`**: Modelo Dimensional (Star Schema) para análise de BI:
-    - `gold.dim_products`: Atributos dos produtos.
-    - `gold.dim_customers`: Localização e identificação de clientes.
-    - `gold.dim_sellers`: Dados dos vendedores.
-    - `gold.dim_time`: Dimensão temporal para análise de tendências.
-    - `gold.fact_orders`: Tabela fato com métricas de vendas e fretes.
+    - `dw.dim_products`: Atributos dos produtos.
+    - `dw.dim_customers`: Localização e identificação de clientes.
+    - `dw.dim_sellers`: Dados dos vendedores.
+    - `dw.dim_time`: Dimensão temporal para análise de tendências.
+    - `dw.fact_orders`: Tabela fato com métricas de vendas e fretes.
 
 ## Outros Comandos
 
