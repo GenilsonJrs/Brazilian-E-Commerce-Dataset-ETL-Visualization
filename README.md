@@ -16,9 +16,9 @@ Os dados utilizados são provenientes do [Brazilian E-Commerce Public Dataset by
 ## Dashboard
 
 ![Visão Geral](Data%20Visualization/img/1.jpeg)
-![Saúde Operacional](Data%20Visualization/img/1.jpeg)
-![Análise Logística](Data%20Visualization/img/1.jpeg)
-![Segmentação](Data%20Visualization/img/1.jpeg)
+![Saúde Operacional](Data%20Visualization/img/2.jpeg)
+![Análise Logística](Data%20Visualization/img/3.jpeg)
+![Segmentação](Data%20Visualization/img/4.jpeg)
 
 ## Requirements
 
