@@ -228,33 +228,19 @@ JOIN DW.dim_tmp t ON f.srk_tmp = t.srk_tmp
 GROUP BY t.num_ano, t.nam_mes, t.num_mes
 ORDER BY t.num_ano, t.num_mes;
 
--- 15 Princípio de Pareto (Risco de Concentração)
-WITH Categoria_Receita AS (
-    SELECT 
-        p.nam_cat AS Categoria,
-        SUM(f.val_tot) AS Receita_Total
-    FROM DW.fat_vnd_itm f
-    JOIN DW.dim_prd p ON f.srk_prd = p.srk_prd
-    GROUP BY p.nam_cat
-),
-Calculo_Math AS (
-    SELECT 
-        Categoria,
-        Receita_Total,
-        SUM(Receita_Total) OVER (ORDER BY Receita_Total DESC) AS Receita_Acumulada,
-        SUM(Receita_Total) OVER () AS Receita_Global
-    FROM Categoria_Receita
-),
-Tabela_Final AS (
-    SELECT 
-        Categoria,
-        Receita_Total,
-        ROUND((Receita_Acumulada / Receita_Global) * 100, 2) AS Perc_Acumulado
-    FROM Calculo_Math
-)
-SELECT * FROM Tabela_Final
-WHERE Perc_Acumulado <= 95
-ORDER BY Receita_Total DESC;
+-- 15 Impacto do Frete no Preço
+SELECT 
+    t.num_ano,
+    t.num_mes,
+    t.nam_mes,
+    COUNT(f.cod_ped) AS Total_Entregas,
+    ROUND(AVG(f.qtd_dia_ent), 1) AS Media_Dias_Entrega
+FROM DW.fat_vnd_itm f
+JOIN DW.dim_tmp t ON f.srk_tmp = t.srk_tmp
+WHERE f.qtd_dia_ent IS NOT NULL
+GROUP BY t.num_ano, t.num_mes, t.nam_mes
+ORDER BY t.num_ano, t.num_mes
+
 -- 16 Vendas Dais da Semana
 SELECT 
     t.nam_dia_sem AS Dia_Semana,
