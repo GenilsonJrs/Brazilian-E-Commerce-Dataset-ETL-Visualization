@@ -1,0 +1,119 @@
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: #4A2E8C;
+  --md-primary-fg-color--light: #6B4CB8;
+  --md-primary-fg-color--dark: #331F63;
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #A8801A;
+  --md-accent-fg-color--transparent: rgba(168, 128, 26, 0.1);
+  --md-accent-bg-color: #FFFFFF;
+  --md-accent-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #FAF9FD;
+  --md-typeset-a-color: #4A2E8C;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #C4A8F0;
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: #E0BC55;
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: #FFFFFF;
+}
+
+.camada {
+  border-left: 5px solid;
+  padding: 0.6rem 0 0.6rem 1rem;
+  margin: 1.25rem 0;
+}
+
+.camada-raw {
+  border-color: #9A6A38;
+}
+
+.camada-silver {
+  border-color: #8A94A6;
+}
+
+.camada-gold {
+  border-color: #C9A227;
+}
+
+.camada strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.shot {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.14);
+  margin: 0.5rem 0;
+}
+
+.person-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.person-card {
+  border: 2px solid var(--md-accent-fg-color);
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  width: 230px;
+  background: var(--md-default-bg-color);
+}
+
+.person-card img {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.person-initials {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--md-primary-fg-color);
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.person-card .person-name {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.person-card .person-role {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  display: block;
+}

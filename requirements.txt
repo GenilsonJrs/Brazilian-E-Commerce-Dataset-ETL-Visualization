@@ -1,8 +1,6 @@
 pandas
-psycopg2
-hashlib
-psycopg2
-warnings
-seaborn
+psycopg2-binary
 sqlalchemy
+seaborn
 matplotlib
+jupyter

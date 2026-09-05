@@ -1,0 +1,81 @@
+site_name: Brazilian E-Commerce ETL
+site_description: Pipeline de ETL com Arquitetura de Medalhão sobre o dataset da Olist, com modelagem dimensional em PostgreSQL e dashboard em Power BI.
+site_author: Genilson Silva de Araújo Júnior
+site_url: https://genilsonjrs.github.io/brazilian-ecommerce-etl/
+repo_url: https://github.com/GenilsonJrs/brazilian-ecommerce-etl
+repo_name: GenilsonJrs/brazilian-ecommerce-etl
+edit_uri: edit/main/docs/
+copyright: Genilson Silva de Araújo Júnior e Pedro Henrique Caldeira de Moraes · FGA/UnB
+
+theme:
+  name: material
+  language: pt-BR
+  favicon: assets/favicon.svg
+  icon:
+    logo: material/database-arrow-right
+    repo: fontawesome/brands/github
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Mudar para o tema escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para o tema claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: pt
+
+nav:
+  - Início: index.md
+  - Pipeline:
+      - Arquitetura de medalhão: pipeline/arquitetura.md
+      - Camada raw: pipeline/raw.md
+      - Camada silver: pipeline/silver.md
+      - Camada gold: pipeline/gold.md
+  - Dashboard: dashboard.md
+  - Como rodar: como-rodar.md
+  - Equipe: equipe.md
